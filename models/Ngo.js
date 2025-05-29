@@ -1,0 +1,43 @@
+const mongoose = require("mongoose");
+
+const NgoSchema = new mongoose.Schema({
+  organizationName: String,
+  registrationNumber: String,
+  number80G: String,
+  number12A: String,
+  fcraNumber: String,
+  fullName: String,
+  fatherName: String,
+  dob: Date,
+  gender: String,
+  maritalStatus: String,
+  religion: String,
+  languagesKnown: String,
+  officeAddress: String,
+  homeAddress: String,
+  houseNo: String,
+  streetName: String,
+  apartmentName: String,
+  village: String,
+  mandalName: String,
+  districtName: String,
+  city: String,
+  wardName: String,
+  landmark: String,
+  pincode: String,
+  whatsappNumber: String,
+  contactNumber: String,
+  email: String,
+  webId: String,
+  addressProof: String,
+  idProof: String,
+  selfiePhoto: String,
+  ngoProfile: String,
+  status: {
+    type: String,
+    default: "Pending",
+    enum: ["Pending", "Accepted", "Rejected"],
+  },
+});
+
+module.exports = mongoose.model("Ngo", NgoSchema);
