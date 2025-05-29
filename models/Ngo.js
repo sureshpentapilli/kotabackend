@@ -33,6 +33,8 @@ const NgoSchema = new mongoose.Schema({
   idProof: String,
   selfiePhoto: String,
   ngoProfile: String,
+  state: String,
+  parlimentConstituency: String,
   status: {
     type: String,
     default: "Pending",
